@@ -1,0 +1,124 @@
+{
+  "tasas": {
+    "iva": {
+      "valor": 19,
+      "fuente": "Ley sobre Impuesto a las Ventas y Servicios (DL 825)",
+      "fecha_verificacion": "2024-01-01"
+    },
+    "primera_categoria": {
+      "regimen_general": {
+        "valor": 27,
+        "fuente": "Art. 20 Ley de la Renta",
+        "fecha_verificacion": "2024-01-01"
+      },
+      "propyme_general": {
+        "valor": 25,
+        "fuente": "Art. 14 letra D N°3 Ley de la Renta",
+        "fecha_verificacion": "2024-01-01"
+      },
+      "propyme_transparente": {
+        "valor": 0,
+        "fuente": "Art. 14 letra D N°8 Ley de la Renta",
+        "fecha_verificacion": "2024-01-01",
+        "nota": "Tributación directa en dueños"
+      }
+    },
+    "impuesto_adicional": {
+      "valor": 35,
+      "fuente": "Art. 58 N°1 Ley de la Renta",
+      "fecha_verificacion": "2024-01-01"
+    },
+    "ppm_mensual": {
+      "valor": 0.2,
+      "fuente": "Art. 84 letra a) Ley de la Renta",
+      "fecha_verificacion": "2024-01-01",
+      "nota": "Porcentaje de ingresos brutos mensuales"
+    },
+    "articulo_21": {
+      "valor": 40,
+      "fuente": "Art. 21 Ley de la Renta - Gastos rechazados",
+      "fecha_verificacion": "2024-01-01"
+    }
+  },
+  "limites": {
+    "propyme_uf": {
+      "valor": 85000,
+      "fuente": "Art. 14 letra D N°3 y N°8 Ley de la Renta",
+      "fecha_verificacion": "2024-01-01",
+      "nota": "Promedio ingresos últimos 3 años"
+    }
+  },
+  "tramos_global_complementario": {
+    "fuente": "Art. 52 Ley de la Renta",
+    "fecha_verificacion": "2024-01-01",
+    "unidad": "UTA",
+    "tramos": [
+      { "desde_uta": 0, "hasta_uta": 13.5, "tasa": 0, "factor": 0, "deducir_uta": 0 },
+      { "desde_uta": 13.5, "hasta_uta": 30, "tasa": 4, "factor": 0.04, "deducir_uta": 0.54 },
+      { "desde_uta": 30, "hasta_uta": 50, "tasa": 8, "factor": 0.08, "deducir_uta": 1.74 },
+      { "desde_uta": 50, "hasta_uta": 70, "tasa": 13.5, "factor": 0.135, "deducir_uta": 4.49 },
+      { "desde_uta": 70, "hasta_ata": 90, "tasa": 23, "factor": 0.23, "deducir_uta": 11.14 },
+      { "desde_uta": 90, "hasta_uta": 120, "tasa": 30.4, "factor": 0.304, "deducir_uta": 17.8 },
+      { "desde_uta": 120, "hasta_uta": 150, "tasa": 35.5, "factor": 0.355, "deducir_uta": 23.92 },
+      { "desde_uta": 150, "hasta_uta": 999999, "tasa": 40, "factor": 0.40, "deducir_uta": 30.67 }
+    ]
+  },
+  "valores_referenciales": {
+    "uf": {
+      "valor": 37500,
+      "fuente": "sii.cl - Valor referencial",
+      "fecha_verificacion": "2024-01-01",
+      "verificar": true,
+      "nota": "Verificar valor vigente en sii.cl"
+    },
+    "utm": {
+      "valor": 65000,
+      "fuente": "sii.cl - Valor referencial",
+      "fecha_verificacion": "2024-01-01",
+      "verificar": true,
+      "nota": "Verificar valor vigente en sii.cl"
+    },
+    "uta": {
+      "valor": 780000,
+      "fuente": "sii.cl - Valor referencial",
+      "fecha_verificacion": "2024-01-01",
+      "verificar": true,
+      "nota": "Verificar valor vigente en sii.cl para Operación Renta"
+    }
+  },
+  "depreciacion": {
+    "normal": {
+      "años_vida_util": {
+        "maquinaria": 10,
+        "vehiculos": 7,
+        "equipos_computacion": 6,
+        "muebles": 10,
+        "inmuebles": 20
+      },
+      "fuente": "Circular 45/2016 SII"
+    },
+    "acelerada": {
+      "factor": 3,
+      "fuente": "Art. 31 N°5 Ley de la Renta",
+      "nota": "Depreciar en 1/3 del tiempo normal"
+    },
+    "instantanea": {
+      "limite_uf": 5000,
+      "anios_uso_maximo": 2,
+      "fuente": "Ley 21.256 - Depreciación Instantánea PYME",
+      "fecha_verificacion": "2024-01-01",
+      "nota": "Activos nuevos o usados hasta 2 años"
+    }
+  },
+  "plazos": {
+    "f29_mensual": {
+      "dia": 12,
+      "nota": "Día 12 del mes siguiente (si cae en fin de semana, siguiente día hábil)"
+    },
+    "operacion_renta": {
+      "mes": 4,
+      "dia": 30,
+      "nota": "Abril de cada año"
+    }
+  }
+}
