@@ -239,7 +239,8 @@ export function calcularGlobalComplementario(
   
   for (const tramo of tramos) {
     if (baseEnUTA > tramo.desde_uta) {
-      if (baseEnUTA <= tramo.hasta_uta || tramo.hasta_uta === 999999) {
+      const hastaUTA = (tramo as any).hasta_uta || (tramo as any).hasta_ata || 999999;
+      if (baseEnUTA <= hastaUTA || hastaUTA === 999999) {
         impuesto = baseEnUTA * tramo.factor - tramo.deducir_uta * valorUTA;
         break;
       }
